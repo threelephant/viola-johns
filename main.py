@@ -31,7 +31,7 @@ def test_recognition(test_image_paths):
 
         for (x, y, w, h) in faces:
             number_predicted, conf = recognizer.predict(image[y: y + h, x: x + w])
-            number_actual = int(str(image_path.parent)[-1:])
+            number_actual = int(str(image_path.parent)[-1:])    
 
             if number_actual == number_predicted:
                 print("{} корректно опознано со значением уверенности {}".format(number_actual, conf))
